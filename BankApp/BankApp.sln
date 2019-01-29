@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankApp", "BankApp\BankApp.csproj", "{3842B97D-5898-48A4-85DC-13A21BEE91B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankApp", "BankApp\BankApp.csproj", "{ACBA7869-2119-4094-BF32-76FBE25EF203}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3842B97D-5898-48A4-85DC-13A21BEE91B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3842B97D-5898-48A4-85DC-13A21BEE91B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3842B97D-5898-48A4-85DC-13A21BEE91B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3842B97D-5898-48A4-85DC-13A21BEE91B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACBA7869-2119-4094-BF32-76FBE25EF203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACBA7869-2119-4094-BF32-76FBE25EF203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACBA7869-2119-4094-BF32-76FBE25EF203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACBA7869-2119-4094-BF32-76FBE25EF203}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5FEB7503-BC18-438E-AA96-F4E0E9020AFA}
+		SolutionGuid = {18D58068-B038-4916-9906-8B19D3DF4A35}
 	EndGlobalSection
 EndGlobal
