@@ -1,10 +1,10 @@
-﻿using BankApp.Model;
+﻿using BankApi.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BankApp.Services
+namespace BankApi.Services
 {
     public interface ICustomerService
     {

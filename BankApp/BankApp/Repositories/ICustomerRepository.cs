@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BankApp.Model;
+using BankApi.Model;
 
-namespace BankApp.Repositories
+namespace BankApi.Repositories
 {
     public interface ICustomerRepository
     {
