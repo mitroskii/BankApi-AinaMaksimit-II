@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.Serialization;
 
 namespace BankApi.Model
 {
@@ -15,7 +16,7 @@ namespace BankApi.Model
         public decimal Amount { get; set; }
         [Column(TypeName = "date")]
         public DateTime TimeStamp { get; set; }
-
+        [IgnoreDataMember]
         [ForeignKey("IBAN")]
         [InverseProperty("Transaction")]
         public virtual Account IBANNavigation { get; set; }
