@@ -8,13 +8,12 @@ namespace BankApi.Model
     public partial class Transaction
     {
         public long Id { get; set; }
-        [Required]
         [StringLength(20)]
         public string IBAN { get; set; }
         [Column(TypeName = "decimal(18, 0)")]
-        public decimal Amount { get; set; }
-        [Column(TypeName = "date")]
-        public DateTime TimeStamp { get; set; }
+        public decimal? Amount { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime? TimeStamp { get; set; }
 
         [ForeignKey("IBAN")]
         [InverseProperty("Transaction")]
