@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankApp.Utilities
+namespace BankApi.Utilities
 {
     public class PasswordHash
     {

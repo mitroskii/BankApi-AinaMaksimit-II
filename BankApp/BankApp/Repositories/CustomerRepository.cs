@@ -1,11 +1,11 @@
-﻿using BankApp.Model;
+﻿using BankApi.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace BankApp.Repositories
+namespace BankApi.Repositories
 {
     public class CustomerRepository : ICustomerRepository
     {

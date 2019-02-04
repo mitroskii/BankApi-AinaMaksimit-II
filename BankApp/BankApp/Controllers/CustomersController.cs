@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BankApp.Model;
-using BankApp.Repositories;
-using BankApp.Services;
+using BankApi.Model;
+using BankApi.Repositories;
+using BankApi.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BankApp.Controllers
+namespace BankApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BankApp.Model;
-using BankApp.Repositories;
+using BankApi.Model;
+using BankApi.Repositories;
 
-namespace BankApp.Services
+namespace BankApi.Services
 {
     public class CustomerService : ICustomerService
     {
