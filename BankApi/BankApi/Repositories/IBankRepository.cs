@@ -2,10 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BankApi.Model;
 
 namespace BankApi.Repositories
 {
-    interface IBankRepository
+    public interface IBankRepository
     {
+        Bank Create(Bank bank);
+        List<Bank> Read();
+        Bank Read(int id);
+        Bank Update(Bank bank);
+        void Delete(int id);
     }
 }
