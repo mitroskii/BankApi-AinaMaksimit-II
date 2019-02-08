@@ -35,6 +35,7 @@ namespace BankApi.Repositories
         {
             return _bankdbContext.Customer
                 .AsNoTracking()
+                .Include(a => a.Account)
                 .ToList();
         }
 

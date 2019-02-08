@@ -19,7 +19,7 @@ namespace BankApi.Model
         [StringLength(50)]
         public string LastName { get; set; }
         public long BankId { get; set; }
-        public string Password { get; set; }
+        public string Psw { get; set; }
         [IgnoreDataMember]
         [ForeignKey("BankId")]
         [InverseProperty("Customer")]
