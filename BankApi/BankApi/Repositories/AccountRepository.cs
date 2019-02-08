@@ -23,9 +23,9 @@ namespace BankApi.Repositories
             return account;
         }
 
-        public void Delete(int id)
+        public void Delete(string iban)
         {
-            var deleteAccount = Read(id);
+            var deleteAccount = Read(iban);
             _bankdbContext.Remove(deleteAccount);
             _bankdbContext.SaveChanges();
             return;
@@ -50,5 +50,4 @@ namespace BankApi.Repositories
             return account;
         }
     }
-}
 }

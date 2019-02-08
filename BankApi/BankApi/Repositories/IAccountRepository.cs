@@ -12,6 +12,6 @@ namespace BankApi.Repositories
         List<Account> Read();
         Account Read(string iban);
         Account Update(Account account);
-        void Delete(int id);
+        void Delete(string iban);
     }
 }

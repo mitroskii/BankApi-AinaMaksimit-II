@@ -10,7 +10,7 @@ namespace BankApi.Repositories
     {
         Transaction Create(Transaction transaction);
         List<Transaction> Read();
-        Transaction Read(string iban);
+        Transaction Read(int id);
         Transaction Update(Transaction transaction);
         void Delete(int id);
     }

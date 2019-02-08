@@ -24,8 +24,7 @@ namespace BankApi.Model
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=digitrade.database.windows.net;Initial Catalog=DTBankDB;User ID=admin.digitrade;Password=*DTBankDB*");
+
             }
         }
 
@@ -60,9 +59,9 @@ namespace BankApi.Model
             {
                 entity.Property(e => e.Firstname).IsUnicode(false);
 
-                entity.Property(e => e.Lastname).IsUnicode(false);
+                entity.Property(e => e.LastName).IsUnicode(false);
 
-                entity.Property(e => e.Psw).IsUnicode(false);
+                entity.Property(e => e.Password).IsUnicode(false);
 
                 entity.HasOne(d => d.Bank)
                     .WithMany(p => p.Customer)
