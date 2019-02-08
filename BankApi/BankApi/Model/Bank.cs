@@ -18,8 +18,7 @@ namespace BankApi.Model
         [Required]
         [StringLength(50)]
         public string Name { get; set; }
-        [Required]
-        [StringLength(10)]
+        [StringLength(8)]
         public string BIC { get; set; }
 
         [IgnoreDataMember]

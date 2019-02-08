@@ -14,10 +14,8 @@ namespace BankApi.Model
         }
 
         public long Id { get; set; }
-        [Required]
         [StringLength(50)]
-        public string FirstName { get; set; }
-        [Required]
+        public string Firstname { get; set; }
         [StringLength(50)]
         public string LastName { get; set; }
         public long BankId { get; set; }

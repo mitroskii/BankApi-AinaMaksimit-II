@@ -32,7 +32,7 @@ namespace BankApi
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddDbContext<BankdbContext>(options => {
-                options.UseSqlServer(Configuration.GetConnectionString("LocalBankdbContext"));
+                options.UseSqlServer(Configuration.GetConnectionString("AzureBankdbContext"));
             });
 
             //ignore json serialization

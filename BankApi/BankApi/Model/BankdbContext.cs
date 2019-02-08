@@ -24,6 +24,8 @@ namespace BankApi.Model
         {
             if (!optionsBuilder.IsConfigured)
             {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                optionsBuilder.UseSqlServer("Data Source=digitrade.database.windows.net;Initial Catalog=DTBankDB;User ID=admin.digitrade;Password=*DTBankDB*");
             }
         }
 
@@ -40,12 +42,12 @@ namespace BankApi.Model
                 entity.HasOne(d => d.Bank)
                     .WithMany(p => p.Account)
                     .HasForeignKey(d => d.BankId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Account_Bank");
 
                 entity.HasOne(d => d.BankNavigation)
                     .WithMany(p => p.Account)
                     .HasForeignKey(d => d.BankId)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_Account_Customer");
             });
 
@@ -56,15 +58,16 @@ namespace BankApi.Model
 
             modelBuilder.Entity<Customer>(entity =>
             {
-                entity.Property(e => e.FirstName).IsUnicode(false);
+                entity.Property(e => e.Firstname).IsUnicode(false);
 
-                entity.Property(e => e.LastName).IsUnicode(false);
+                entity.Property(e => e.Lastname).IsUnicode(false);
 
-                entity.Property(e => e.Password).IsUnicode(false);
+                entity.Property(e => e.Psw).IsUnicode(false);
 
                 entity.HasOne(d => d.Bank)
                     .WithMany(p => p.Customer)
                     .HasForeignKey(d => d.BankId)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_Customer_Bank");
             });
 
@@ -73,6 +76,7 @@ namespace BankApi.Model
                 entity.HasOne(d => d.IBANNavigation)
                     .WithMany(p => p.Transaction)
                     .HasForeignKey(d => d.IBAN)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_Transaction_Account");
             });
 

@@ -9,7 +9,6 @@ namespace BankApi.Model
     public partial class Transaction
     {
         public long Id { get; set; }
-        [Required]
         [StringLength(20)]
         public string IBAN { get; set; }
         [Column(TypeName = "decimal(18, 0)")]
