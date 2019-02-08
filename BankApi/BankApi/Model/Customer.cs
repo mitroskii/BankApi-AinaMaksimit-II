@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.Serialization;
 
 namespace BankApi.Model
 {
@@ -16,14 +17,14 @@ namespace BankApi.Model
         [StringLength(50)]
         public string Firstname { get; set; }
         [StringLength(50)]
-        public string Lastname { get; set; }
-        public long? BankId { get; set; }
-        [StringLength(50)]
-        public string Psw { get; set; }
-
+        public string LastName { get; set; }
+        public long BankId { get; set; }
+        public string Password { get; set; }
+        [IgnoreDataMember]
         [ForeignKey("BankId")]
         [InverseProperty("Customer")]
         public virtual Bank Bank { get; set; }
+        [IgnoreDataMember]
         [InverseProperty("BankNavigation")]
         public virtual ICollection<Account> Account { get; set; }
     }

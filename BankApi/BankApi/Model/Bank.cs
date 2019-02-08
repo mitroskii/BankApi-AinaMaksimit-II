@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.Serialization;
 
 namespace BankApi.Model
 {
@@ -20,8 +21,10 @@ namespace BankApi.Model
         [StringLength(8)]
         public string BIC { get; set; }
 
+        [IgnoreDataMember]
         [InverseProperty("Bank")]
         public virtual ICollection<Account> Account { get; set; }
+        [IgnoreDataMember]
         [InverseProperty("Bank")]
         public virtual ICollection<Customer> Customer { get; set; }
     }
