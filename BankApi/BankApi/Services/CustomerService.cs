@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using BankApi.Model;
 using BankApi.Repositories;
+using BankApi.Utilities;
 
 namespace BankApi.Services
 {
@@ -18,6 +19,7 @@ namespace BankApi.Services
 
         public Customer Create(Customer customer)
         {
+            customer.Psw = PasswordHash.HashPassword(customer.Psw, "salt");
             return _customerRepository.Create(customer);
         }
 
@@ -40,6 +42,7 @@ namespace BankApi.Services
             }
             else
             {
+                customer.Psw = PasswordHash.HashPassword(customer.Psw, "salt");
                 return _customerRepository.Update(customer);
             }
         }

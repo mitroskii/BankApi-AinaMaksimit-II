@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using BankApi.Model;
 using BankApi.Repositories;
 using BankApi.Services;
+using BankApi.Utilities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BankApi.Controllers
@@ -13,7 +14,7 @@ namespace BankApi.Controllers
     [ApiController]
     public class CustomersController : ControllerBase
     {
-            private readonly ICustomerRepository _customerRepository;
+        private readonly ICustomerRepository _customerRepository;
             private readonly ICustomerService _customerService;
 
             public CustomersController(ICustomerRepository customerRepository, ICustomerService customerService)
@@ -22,15 +23,15 @@ namespace BankApi.Controllers
                 _customerService = customerService;
             }
 
-            // GET api/persons
-            [HttpGet]
+        // GET api/customers
+        [HttpGet]
             public ActionResult<List<Customer>> GetCustomers()
             {
                 var customers = _customerService.Read();
                 return new JsonResult(customers);
             }
 
-            // GET api/persons/5
+            // GET api/customers/5
             [HttpGet("{id}")]
             public ActionResult<Customer> Get(int id)
             {
@@ -38,7 +39,7 @@ namespace BankApi.Controllers
                 return new JsonResult(customers);
             }
 
-            // POST api/persons
+            // POST api/customers
             [HttpPost]
             public ActionResult<Customer> Post(Customer customer)
             {
@@ -46,7 +47,7 @@ namespace BankApi.Controllers
                 return new JsonResult(newCustomer);
             }
 
-            // PUT api/persons
+            // PUT api/customers
             [HttpPut("{id}")]
             public ActionResult<Customer> Put(int id, Customer customer)
             {
@@ -54,7 +55,7 @@ namespace BankApi.Controllers
                 return new JsonResult(updateCustomer);
             }
 
-            // DELETE api/persons
+            // DELETE api/customers
             [HttpDelete("{id}")]
             public ActionResult Delete(int id)
             {
