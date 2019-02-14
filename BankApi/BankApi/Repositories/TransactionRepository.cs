@@ -23,14 +23,6 @@ namespace BankApi.Repositories
             return transaction;
         }
 
-        public void Delete(int id)
-        {
-            var deleteTransaction = Read(id);
-            _bankdbContext.Remove(deleteTransaction);
-            _bankdbContext.SaveChanges();
-            return;
-        }
-
         public List<Transaction> Read()
         {
             return _bankdbContext.Transaction
@@ -41,13 +33,6 @@ namespace BankApi.Repositories
         public Transaction Read(int id)
         {
             return _bankdbContext.Transaction.FirstOrDefault(t => t.Id == id);
-        }
-
-        public Transaction Update(Transaction transaction)
-        {
-            _bankdbContext.Update(transaction);
-            _bankdbContext.SaveChanges();
-            return transaction;
         }
     }
 }

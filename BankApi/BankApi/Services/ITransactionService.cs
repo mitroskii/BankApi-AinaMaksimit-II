@@ -11,7 +11,5 @@ namespace BankApi.Services
         Transaction Create(Transaction transaction);
         List<Transaction> Read();
         Transaction Read(int id);
-        Transaction Update(int id, Transaction transaction);
-        void Delete(int id);
     }
 }

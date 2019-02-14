@@ -14,12 +14,10 @@ namespace BankApi.Controllers
     [ApiController]
     public class CustomersController : ControllerBase
     {
-        private readonly ICustomerRepository _customerRepository;
             private readonly ICustomerService _customerService;
 
-            public CustomersController(ICustomerRepository customerRepository, ICustomerService customerService)
+            public CustomersController(ICustomerService customerService)
             {
-                _customerRepository = customerRepository;
                 _customerService = customerService;
             }
 

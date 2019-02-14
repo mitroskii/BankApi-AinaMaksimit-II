@@ -30,23 +30,5 @@ namespace BankApi.Services
         {
             return _transactionRepository.Read(id);
         }
-
-        public Transaction Update(int id, Transaction transaction)
-        {
-            var updateTransaction = _transactionRepository.Read(id);
-            if (updateTransaction == null)
-            {
-                throw new Exception("Transaction not found!");
-            }
-            else
-            {
-                return _transactionRepository.Update(transaction);
-            }
-        }
-
-        public void Delete(int id)
-        {
-            _transactionRepository.Delete(id);
-        }
     }
 }
